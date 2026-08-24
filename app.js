@@ -1,6 +1,6 @@
 /* Pratyasa — progressive enhancement only.
-   With JavaScript disabled the page is complete: every step is readable,
-   every diagram stage is visible, and nothing is hidden behind a script. */
+   With JavaScript disabled the page is complete: every step is readable, every
+   diagram stage is fully visible, and nothing is hidden behind a script. */
 (() => {
   "use strict";
 
@@ -8,7 +8,7 @@
 
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---- Stepper drives the diagram ---- */
+  /* ---- Stepper drives the diagram, and the diagram drives it back ---- */
   const steps  = Array.from(document.querySelectorAll(".step"));
   const stages = Array.from(document.querySelectorAll(".diagram [data-stage]"));
 
@@ -23,10 +23,19 @@
   }
 
   if (steps.length && stages.length) {
-    steps.forEach((s, i) => {
-      s.addEventListener("click", () => setActive(i));
-      s.addEventListener("focus", () => setActive(i));
+    /* Click only. A focus handler here would re-fire on every Tab press and
+       strobe the diagram for keyboard users; buttons already emit click on
+       Enter and Space, so keyboard control is covered without it. */
+    steps.forEach((s, i) => s.addEventListener("click", () => setActive(i)));
+
+    stages.forEach((g, i) => {
+      g.addEventListener("click", () => {
+        setActive(i);
+        const btn = steps[i];
+        if (btn) btn.focus({ preventScroll: true });
+      });
     });
+
     setActive(0);
   }
 
@@ -40,13 +49,13 @@
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    }, { threshold: 0.1, rootMargin: "0px 0px -6% 0px" });
     revealables.forEach((el) => io.observe(el));
   } else {
     revealables.forEach((el) => el.classList.add("in-view"));
   }
 
-  /* ---- Active section in the nav ---- */
+  /* ---- Current section in the nav (exposed to assistive tech, not just paint) ---- */
   const navLinks = Array.from(document.querySelectorAll(".site-head nav a"));
   const sections = navLinks
     .map((a) => document.querySelector(a.getAttribute("href")))
@@ -56,9 +65,13 @@
     const spy = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (!e.isIntersecting) return;
-        navLinks.forEach((a) =>
-          a.classList.toggle("is-current", a.getAttribute("href") === "#" + e.target.id)
-        );
+        navLinks.forEach((a) => {
+          if (a.getAttribute("href") === "#" + e.target.id) {
+            a.setAttribute("aria-current", "true");
+          } else {
+            a.removeAttribute("aria-current");
+          }
+        });
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
     sections.forEach((s) => spy.observe(s));
@@ -74,29 +87,4 @@
       fallback.hidden = false;
     });
   }
-
-  /* ---- Install prompt (only when the browser offers one) ---- */
-  let deferredPrompt = null;
-  const installBtn = document.getElementById("install-btn");
-
-  window.addEventListener("beforeinstallprompt", (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    if (installBtn) installBtn.hidden = false;
-  });
-
-  if (installBtn) {
-    installBtn.addEventListener("click", async () => {
-      if (!deferredPrompt) return;
-      deferredPrompt.prompt();
-      try { await deferredPrompt.userChoice; } catch (_) { /* dismissed */ }
-      deferredPrompt = null;
-      installBtn.hidden = true;
-    });
-  }
-
-  window.addEventListener("appinstalled", () => {
-    deferredPrompt = null;
-    if (installBtn) installBtn.hidden = true;
-  });
 })();

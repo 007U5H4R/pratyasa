@@ -4,24 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pratyasa — Real-time sepsis biomarker detection</title>
-<meta name="description" content="A patented, peer-reviewed handheld biosensor that detects endotoxin — a key sepsis biomarker — at the point of care, down to 10 attograms per millilitre. Patent IN 429867 · Langmuir 2025.">
+<meta name="description" content="A patented, peer-reviewed handheld biosensor that detects endotoxin, a key sepsis biomarker, at the point of care. Detection limit 10 attograms per millilitre. Patent IN 429867 · Langmuir 2025.">
 <link rel="canonical" href="https://pratyasa.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pratyasa">
 <meta property="og:title" content="Pratyasa — Real-time sepsis biomarker detection">
-<meta property="og:description" content="A patented, peer-reviewed handheld biosensor that detects endotoxin — a key sepsis biomarker — at the point of care, down to 10 attograms per millilitre.">
+<meta property="og:description" content="A patented, peer-reviewed handheld biosensor that detects endotoxin, a key sepsis biomarker, at the point of care. Detection limit 10 attograms per millilitre.">
 <meta property="og:url" content="https://pratyasa.vercel.app/">
 <meta property="og:image" content="https://pratyasa.vercel.app/assets/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The Pratyasa handheld endotoxin biosensor displaying a reading — granted patent IN 429867">
+<meta property="og:image:alt" content="The Pratyasa handheld endotoxin biosensor displaying a reading. Granted patent IN 429867.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Pratyasa — Real-time sepsis biomarker detection">
-<meta name="twitter:description" content="A patented, peer-reviewed handheld biosensor that detects endotoxin — a key sepsis biomarker — at the point of care, down to 10 attograms per millilitre.">
+<meta name="twitter:description" content="A patented, peer-reviewed handheld biosensor that detects endotoxin, a key sepsis biomarker, at the point of care.">
 <meta name="twitter:image" content="https://pratyasa.vercel.app/assets/og-cover.png">
 <meta name="theme-color" content="#0B0B0C">
 <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="./manifest.webmanifest">
+<link rel="preload" as="font" type="font/woff2" href="./assets/fonts/rajdhani-latin-700.woff2" crossorigin>
 <link rel="stylesheet" href="./styles.css">
 </head>
 <body id="top">
@@ -29,7 +30,7 @@
 <a class="skip" href="#main">Skip to content</a>
 
 <header class="site-head">
-  <a class="brand" href="#top" aria-label="Pratyasa — back to top">
+  <a class="brand" href="#top" aria-label="Pratyasa, back to top">
     <img src="./assets/wordmark.webp" alt="Pratyasa" width="786" height="75" decoding="async">
   </a>
   <nav aria-label="Sections">
@@ -38,171 +39,197 @@
     <a href="#performance">Performance</a>
     <a href="#proof">Proof</a>
     <a href="#evidence">Evidence</a>
-    <a href="#about">About</a>
+    <a href="#about">Contact</a>
   </nav>
-  <button id="install-btn" type="button" hidden>Install</button>
 </header>
 
 <main id="main">
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow mono">Granted Patent · IN 429867 · Government of India</p>
-      <h1>Sepsis moves in hours.<br>Pratyasa answers in real&nbsp;time.</h1>
-      <p class="lede">A low-cost, handheld biosensor that detects bacterial endotoxin (LPS) — a key sepsis biomarker — at the bedside, down to 10&nbsp;attograms per millilitre.</p>
-      <p class="gloss">Pratyasa · <span lang="sa">प्रत्याशा</span> — Sanskrit for <em>hope</em>.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="mailto:Tushar_Pathak@outlook.com?subject=Pratyasa%20%E2%80%94%20Patent%20IN429867">Get in touch</a>
-        <a class="btn btn-ghost" href="#proof">See it work</a>
-      </div>
-    </div>
-    <div class="hero-media">
-      <img src="./assets/device-cutout.webp" width="1400" height="631" fetchpriority="high" decoding="async"
-           alt="The handheld analyser with its display reading 'Concentration: 10 pg/ml', the disposable sensor chip held in clips beside it, and an Android phone mirroring the same reading over Bluetooth.">
+    <h1>Sepsis moves in hours.<br>Pratyasa answers in real&nbsp;time.</h1>
+    <p class="lede">A low-cost, handheld biosensor that detects bacterial endotoxin (LPS), a key sepsis biomarker, at the bedside. Down to ten attograms per millilitre.</p>
+    <p class="gloss"><span class="deva" lang="sa">प्रत्याशा</span> <span>Pratyasa, Sanskrit for <em>hope</em>. Granted patent IN&nbsp;429867, Government of India.</span></p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#about">Get in touch</a>
+      <a class="btn btn-ghost" href="#proof">Watch it run</a>
     </div>
   </div>
+
+  <figure class="hero-media">
+    <img src="./assets/device-cutout.webp" width="1400" height="631" fetchpriority="high" decoding="async"
+         alt="The handheld analyser, its display reading 'Concentration: 10 pg/ml', the disposable sensor chip held in clips beside it, and an Android phone mirroring the same reading over Bluetooth.">
+  </figure>
+
   <dl class="statbar">
-    <div><dt class="mono">10 ag/mL</dt><dd>limit of detection</dd></div>
-    <div><dt class="mono">Granted 2023</dt><dd>protected to 2042</dd></div>
-    <div><dt class="mono">Whole blood</dt><dd>demonstrated in a real clinical sample</dd></div>
+    <div><dt>10 ag/mL</dt><dd>limit of detection</dd></div>
+    <div><dt>Granted 2023</dt><dd>protected to 2042</dd></div>
+    <div><dt>Whole blood</dt><dd>demonstrated in a real clinical sample</dd></div>
   </dl>
 </section>
 
 <section id="problem" class="reveal">
-  <p class="kicker mono">01 — The problem</p>
   <h2>The test that can't come to the bedside</h2>
   <p class="measure lead">Sepsis demands intervention within hours, and septic shock still carries an in-hospital mortality rate above <strong>40&nbsp;%</strong>.</p>
-  <p class="measure">Yet the standard endotoxin test — the LAL assay — depends on horseshoe-crab blood, costs a great deal, and needs a trained technician in a laboratory. It can miss low concentrations of LPS in blood because of interference, return false positives from shifts in pH or temperature, and false negatives from limited sensitivity. None of it happens where the patient is.</p>
+  <p class="measure">Yet the standard endotoxin test, the LAL assay, depends on horseshoe-crab blood, costs a great deal, and needs a trained technician in a laboratory. It can miss low concentrations of LPS in blood because of interference, return false positives from shifts in pH or temperature, and false negatives from limited sensitivity. None of it happens where the patient is.</p>
 </section>
 
 <section id="how" class="reveal">
-  <p class="kicker mono">02 — The method</p>
   <h2>Four steps, one handheld device</h2>
-  <div class="how-grid">
-    <ol class="steps">
-      <li>
-        <button class="step" type="button" data-step="0">
-          <span class="step-n mono">01</span>
-          <span class="step-b"><strong>Disposable sensor chip</strong>
-          A screen-printed electrode is coated with functionalised carbon nanotubes and copper(I) oxide nanoparticles, then topped with a thiolated aptamer that binds LPS and little else.</span>
-        </button>
-      </li>
-      <li>
-        <button class="step" type="button" data-step="1">
-          <span class="step-n mono">02</span>
-          <span class="step-b"><strong>Capture</strong>
-          LPS in the sample binds the aptamer, changing the current the electrode can carry.</span>
-        </button>
-      </li>
-      <li>
-        <button class="step" type="button" data-step="2">
-          <span class="step-n mono">03</span>
-          <span class="step-b"><strong>Read</strong>
-          The handheld analyser runs differential pulse voltammetry, converting peak current to voltage through precision op-amps and a microcontroller.</span>
-        </button>
-      </li>
-      <li>
-        <button class="step" type="button" data-step="3">
-          <span class="step-n mono">04</span>
-          <span class="step-b"><strong>Report</strong>
-          The concentration appears on the device's display and on a paired Android app over Bluetooth.</span>
-        </button>
-      </li>
-    </ol>
 
-    <div class="diagram-pane">
-      <svg class="diagram" viewBox="0 0 980 300" role="img" aria-labelledby="dg-t dg-d">
-        <title id="dg-t">The detection pipeline</title>
-        <desc id="dg-d">Four stages: a functionalised sensor chip; the aptamer capturing LPS; a differential pulse voltammetry reading; and the result shown on the device and a paired phone.</desc>
-        <defs>
-          <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
-            <path d="M0 0 L8 4 L0 8 z" fill="currentColor"/>
-          </marker>
-        </defs>
-        <path class="flow" d="M210 130 H250 M455 130 H495 M700 130 H740" stroke="currentColor" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <div class="diagram-pane" role="group" aria-label="The detection pipeline, four stages">
+    <svg class="diagram" viewBox="0 0 980 296" role="img" aria-labelledby="dg-t dg-d">
+      <title id="dg-t">The detection pipeline</title>
+      <desc id="dg-d">Four stages: a functionalised sensor chip; the aptamer capturing LPS; a differential pulse voltammetry reading; and the result shown on the device and a paired phone.</desc>
+      <defs>
+        <marker id="arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+          <path d="M0 0 L8 4 L0 8 z" fill="currentColor"/>
+        </marker>
+      </defs>
+      <path class="flow" d="M210 126 H250 M455 126 H495 M700 126 H740" stroke="currentColor" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
 
-        <g data-stage="0">
-          <rect x="78" y="55" width="58" height="132" rx="9" fill="none" stroke="currentColor" stroke-width="2"/>
-          <rect x="90" y="70" width="34" height="12" rx="3" class="sig-f"/>
-          <rect x="90" y="90" width="34" height="12" rx="3" class="sig-f" opacity=".62"/>
-          <rect x="90" y="110" width="34" height="12" rx="3" class="sig-f" opacity=".32"/>
-          <path d="M98 187 v22 M116 187 v22" stroke="currentColor" stroke-width="2"/>
-          <text x="107" y="246" text-anchor="middle">Sensor chip</text>
-          <text x="107" y="268" text-anchor="middle" class="sub">fCNT–Cu₂O + aptamer</text>
-        </g>
+      <g data-stage="0">
+        <rect class="hit" x="60" y="34" width="120" height="230" rx="12"/>
+        <rect x="78" y="52" width="58" height="132" rx="9" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="90" y="67" width="34" height="12" rx="3" class="sig-f"/>
+        <rect x="90" y="87" width="34" height="12" rx="3" class="sig-f" opacity=".62"/>
+        <rect x="90" y="107" width="34" height="12" rx="3" class="sig-f" opacity=".32"/>
+        <path d="M98 184 v22 M116 184 v22" stroke="currentColor" stroke-width="2"/>
+        <text x="107" y="238" text-anchor="middle">Sensor chip</text>
+        <text x="107" y="260" text-anchor="middle" class="sub">fCNT–Cu₂O + aptamer</text>
+      </g>
 
-        <g data-stage="1">
-          <path d="M325 188 v-54 M325 134 l-17 -23 M325 134 l17 -23" fill="none" class="sig-s" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M378 188 v-54 M378 134 l-17 -23 M378 134 l17 -23" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".5"/>
-          <path d="M325 96 l11 -6.5 v-13 l-11 -6.5 l-11 6.5 v13 z" class="gold-f"/>
-          <path d="M404 76 l11 -6.5 v-13 l-11 -6.5 l-11 6.5 v13 z" fill="none" stroke="currentColor" stroke-width="1.8" opacity=".45"/>
-          <text x="352" y="246" text-anchor="middle">Capture</text>
-          <text x="352" y="268" text-anchor="middle" class="sub">LPS binds the aptamer</text>
-        </g>
+      <g data-stage="1">
+        <rect class="hit" x="292" y="34" width="120" height="230" rx="12"/>
+        <path d="M325 185 v-54 M325 131 l-17 -23 M325 131 l17 -23" fill="none" class="sig-s" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M378 185 v-54 M378 131 l-17 -23 M378 131 l17 -23" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".55"/>
+        <path d="M325 93 l11 -6.5 v-13 l-11 -6.5 l-11 6.5 v13 z" class="gold-f"/>
+        <path d="M404 73 l11 -6.5 v-13 l-11 -6.5 l-11 6.5 v13 z" fill="none" stroke="currentColor" stroke-width="1.8" opacity=".5"/>
+        <text x="352" y="238" text-anchor="middle">Capture</text>
+        <text x="352" y="260" text-anchor="middle" class="sub">LPS binds the aptamer</text>
+      </g>
 
-        <g data-stage="2">
-          <path d="M520 190 H672 M520 190 V68" stroke="currentColor" stroke-width="1.5" fill="none" opacity=".55"/>
-          <path d="M526 172 H562 C576 172 580 92 596 92 C612 92 616 172 630 172 H666" fill="none" class="sig-s" stroke-width="2.5" stroke-linecap="round"/>
-          <circle cx="596" cy="92" r="4.5" class="gold-f"/>
-          <path d="M526 172 H666" stroke="currentColor" stroke-width="1" stroke-dasharray="3 5" opacity=".45"/>
-          <text x="596" y="246" text-anchor="middle">Read</text>
-          <text x="596" y="268" text-anchor="middle" class="sub">DPV peak current</text>
-        </g>
+      <g data-stage="2">
+        <rect class="hit" x="512" y="34" width="168" height="230" rx="12"/>
+        <path d="M520 187 H672 M520 187 V65" stroke="currentColor" stroke-width="1.5" fill="none" opacity=".55"/>
+        <path d="M526 169 H562 C576 169 580 89 596 89 C612 89 616 169 630 169 H666" fill="none" class="sig-s" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="596" cy="89" r="4.5" class="gold-f"/>
+        <path d="M526 169 H666" stroke="currentColor" stroke-width="1" stroke-dasharray="3 5" opacity=".45"/>
+        <text x="596" y="238" text-anchor="middle">Read</text>
+        <text x="596" y="260" text-anchor="middle" class="sub">DPV peak current</text>
+      </g>
 
-        <g data-stage="3">
-          <rect x="768" y="68" width="96" height="122" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
-          <rect x="782" y="92" width="68" height="28" rx="4" class="sig-f" opacity=".92"/>
-          <text x="816" y="111" text-anchor="middle" class="lcd">10 pg/mL</text>
-          <rect x="886" y="86" width="48" height="90" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
-          <path d="M876 106 a14 14 0 0 1 0 20 M870 100 a22 22 0 0 1 0 32" fill="none" class="sig-s" stroke-width="1.8" stroke-linecap="round"/>
-          <text x="848" y="246" text-anchor="middle">Report</text>
-          <text x="848" y="268" text-anchor="middle" class="sub">display + Android app</text>
-        </g>
-      </svg>
-    </div>
+      <g data-stage="3">
+        <rect class="hit" x="756" y="34" width="188" height="230" rx="12"/>
+        <rect x="768" y="65" width="96" height="122" rx="10" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="782" y="89" width="68" height="28" rx="4" class="sig-f" opacity=".92"/>
+        <text x="816" y="108" text-anchor="middle" class="lcd">10 pg/mL</text>
+        <rect x="886" y="83" width="48" height="90" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M876 103 a14 14 0 0 1 0 20 M870 97 a22 22 0 0 1 0 32" fill="none" class="sig-s" stroke-width="1.8" stroke-linecap="round"/>
+        <text x="848" y="238" text-anchor="middle">Report</text>
+        <text x="848" y="260" text-anchor="middle" class="sub">display + Android app</text>
+      </g>
+    </svg>
   </div>
-  <p class="after-grid"><a class="text-link" href="https://doi.org/10.1021/acs.langmuir.5c00784" rel="external noopener">Read the science →</a></p>
+
+  <ol class="steps">
+    <li>
+      <button class="step" type="button" data-step="0">
+        <span class="step-n">01</span>
+        <span class="step-b"><strong>Disposable sensor chip</strong>
+        A screen-printed electrode is coated with functionalised carbon nanotubes and copper(I) oxide nanoparticles, then topped with a thiolated aptamer: a short strand of DNA folded to grip LPS and little else.</span>
+      </button>
+    </li>
+    <li>
+      <button class="step" type="button" data-step="1">
+        <span class="step-n">02</span>
+        <span class="step-b"><strong>Capture</strong>
+        LPS in the sample binds the aptamer, changing the current the electrode can carry.</span>
+      </button>
+    </li>
+    <li>
+      <button class="step" type="button" data-step="2">
+        <span class="step-n">03</span>
+        <span class="step-b"><strong>Read</strong>
+        The analyser runs differential pulse voltammetry, a precise sweep that converts that change into a measurable peak.</span>
+      </button>
+    </li>
+    <li>
+      <button class="step" type="button" data-step="3">
+        <span class="step-n">04</span>
+        <span class="step-b"><strong>Report</strong>
+        The concentration appears on the device's display and on a paired Android app over Bluetooth.</span>
+      </button>
+    </li>
+  </ol>
+
+  <p class="after-grid"><a class="text-link" href="https://doi.org/10.1021/acs.langmuir.5c00784" rel="external noopener" target="_blank">Read the science<span aria-hidden="true"> →</span></a></p>
 </section>
 
 <section id="performance" class="reveal">
-  <p class="kicker mono">03 — Performance</p>
-  <h2>Measured, published, peer-reviewed</h2>
+  <h2>How small is ten attograms?</h2>
+  <p class="measure lead">An attogram is a quintillionth of a gram. The sensor's floor sits at ten of them per millilitre, and it stays linear across nine orders of magnitude above that.</p>
+
+  <figure class="scale">
+    <svg viewBox="0 0 1000 190" role="img" aria-labelledby="sc-t sc-d">
+      <title id="sc-t">Detection range on a logarithmic mass scale</title>
+      <desc id="sc-d">A logarithmic axis from milligrams per millilitre down to attograms per millilitre. The sensor's linear range spans from 10 nanograms per millilitre down to 10 attograms per millilitre, nine orders of magnitude, ending at its detection limit.</desc>
+
+      <line class="axis" x1="70" y1="118" x2="930" y2="118"/>
+
+      <g class="ticks">
+        <g><line x1="70"  y1="110" x2="70"  y2="126"/><text x="70"  y="150">mg/mL</text></g>
+        <g><line x1="242" y1="110" x2="242" y2="126"/><text x="242" y="150">µg/mL</text></g>
+        <g><line x1="414" y1="110" x2="414" y2="126"/><text x="414" y="150">ng/mL</text></g>
+        <g><line x1="586" y1="110" x2="586" y2="126"/><text x="586" y="150">pg/mL</text></g>
+        <g><line x1="758" y1="110" x2="758" y2="126"/><text x="758" y="150">fg/mL</text></g>
+        <g><line x1="930" y1="110" x2="930" y2="126"/><text x="930" y="150">ag/mL</text></g>
+      </g>
+
+      <line class="band" x1="357" y1="118" x2="873" y2="118"/>
+
+      <g class="marker">
+        <line x1="357" y1="86" x2="357" y2="130"/>
+        <text x="357" y="76" text-anchor="middle">10 ng/mL</text>
+      </g>
+      <g class="marker marker-lod">
+        <line x1="873" y1="86" x2="873" y2="130"/>
+        <circle cx="873" cy="118" r="5"/>
+        <text x="873" y="76" text-anchor="end">10 ag/mL</text>
+        <text x="873" y="176" text-anchor="end" class="sub">limit of detection</text>
+      </g>
+      <text x="615" y="40" text-anchor="middle" class="span-label">linear range · nine orders of magnitude</text>
+    </svg>
+    <figcaption class="fine">Each labelled step is a thousandfold. From a milligram to an attogram is fifteen of them.</figcaption>
+  </figure>
+
+  <h3 class="sub-head">Measured, published, peer-reviewed</h3>
   <div class="bento">
-    <div class="cell cell-wide">
-      <p class="value"><span class="v mono">10</span><span class="u mono">ag/mL</span></p>
-      <p class="label">limit of detection — an attogram is 10⁻¹⁸ of a gram</p>
+    <div class="cell">
+      <p class="value"><span class="v">8.2</span><span class="u">%</span></p>
+      <p class="label">relative standard deviation across five consecutive runs</p>
     </div>
-    <figure class="cell cell-media cell-tall">
+    <div class="cell">
+      <p class="value"><span class="v">71</span><span class="u">%</span></p>
+      <p class="label">signal retained after 100 successive measurements</p>
+    </div>
+    <figure class="cell cell-media">
       <img src="./assets/device-photo.jpg" width="1600" height="900" loading="lazy" decoding="async"
            alt="The complete prototype on the bench: analyser, sensor chip in its clips, and the paired phone, all showing the same reading.">
     </figure>
     <div class="cell">
-      <p class="value"><span class="v mono small">10 ag/mL – 10 ng/mL</span></p>
-      <p class="label">linear detection range</p>
-    </div>
-    <div class="cell">
-      <p class="value"><span class="v mono">8.2</span><span class="u mono">%</span></p>
-      <p class="label">relative standard deviation across five consecutive runs</p>
-    </div>
-    <div class="cell">
-      <p class="value"><span class="v mono">71</span><span class="u mono">%</span></p>
-      <p class="label">signal retained after 100 successive measurements</p>
-    </div>
-    <div class="cell">
-      <p class="value"><span class="v mono small">18 × 11.5 × 5.5</span><span class="u mono">cm</span></p>
+      <p class="value"><span class="v small">18 × 11.5 × 5.5</span><span class="u">cm</span></p>
       <p class="label">handheld, 3D-printed analyser</p>
     </div>
-    <div class="cell cell-wide">
-      <p class="value"><span class="v mono small">Whole blood · Mayonnaise · Fruit juice</span></p>
-      <p class="label">real sample types the sensor has been demonstrated in</p>
+    <div class="cell cell-samples">
+      <p class="value"><span class="v small">Whole blood · Mayonnaise · Fruit juice</span></p>
+      <p class="label">the three real sample types the sensor has been demonstrated in</p>
     </div>
   </div>
   <p class="fine">All figures from Kuttoth, Pathak &amp; Sandhyarani, <em>Langmuir</em> 2025, 41 (26), and its Supporting Information.</p>
 </section>
 
 <section id="proof" class="reveal">
-  <p class="kicker mono">04 — Proof</p>
   <h2>Real hardware, running</h2>
   <p class="measure">Not a render. The prototype reading a sample, with the result mirrored to the Android app over Bluetooth.</p>
   <div class="media-frame">
@@ -216,63 +243,60 @@
 </section>
 
 <section id="evidence" class="reveal">
-  <p class="kicker mono">05 — Evidence</p>
   <h2>The evidence</h2>
   <div class="evidence-grid">
 
     <article class="card">
-      <h3>Granted patent</h3>
-      <p class="card-title">A Low-Cost Portable Electrochemical Biosensor for Rapid Detection of Endotoxin and Method Thereof</p>
-      <dl class="facts mono">
+      <h3>A Low-Cost Portable Electrochemical Biosensor for Rapid Detection of Endotoxin and Method Thereof</h3>
+      <dl class="facts">
         <div><dt>Patent</dt><dd>IN 429867</dd></div>
         <div><dt>Application</dt><dd>202241053140</dd></div>
         <div><dt>Filed</dt><dd>16 September 2022</dd></div>
         <div><dt>Granted</dt><dd>24 April 2023</dd></div>
         <div><dt>Term</dt><dd>20 years, to 2042</dd></div>
         <div><dt>Patentee</dt><dd>National Institute of Technology–Calicut</dd></div>
+        <div><dt>Inventors</dt><dd>Dr. N. Sandhyarani · Tushar Pathak · Haritha K · Dr. Arun R · Dr. M. K. Ravi Varma</dd></div>
       </dl>
-      <p class="fine">Inventors — Dr. N. Sandhyarani · Tushar Pathak · Haritha K · Dr. Arun R · Dr. M. K. Ravi Varma</p>
-      <a class="thumb" href="./assets/certificate.jpg">
-        <img src="./assets/certificate.jpg" width="848" height="1200" loading="lazy" decoding="async"
-             alt="The Government of India patent certificate for patent number 429867.">
-        <span class="text-link">View the certificate →</span>
-      </a>
+      <div class="card-actions">
+        <a class="text-link" href="./assets/certificate.jpg" target="_blank" rel="noopener">View the certificate<span aria-hidden="true"> →</span></a>
+        <a class="text-link quiet" href="https://iprsearch.ipindia.gov.in/PublicSearch/" target="_blank" rel="external noopener">Verify on the Indian Patent Office register<span aria-hidden="true"> →</span></a>
+      </div>
     </article>
 
     <article class="card">
-      <h3>Peer-reviewed publication</h3>
-      <p class="card-title">A Point-of-Care Aptasensor for the Real-Time Detection of Sepsis Biomarker</p>
-      <p class="measure">Kuttoth, H.; Pathak, T.; Sandhyarani, N. — <em>Langmuir</em> 2025, 41 (26).</p>
-      <p class="mono doi">DOI 10.1021/acs.langmuir.5c00784</p>
-      <p class="fine">The paper cites this patent as reference 38 — the published science and the granted claim point at each other.</p>
-      <a class="thumb" href="https://doi.org/10.1021/acs.langmuir.5c00784" rel="external noopener">
-        <img class="cover" src="./assets/langmuir-cover.jpg" width="421" height="560" loading="lazy" decoding="async"
-             alt="Cover of Langmuir volume 41, issue 26, the issue in which the paper appears.">
-        <span class="text-link">Read the paper →</span>
-      </a>
+      <h3>A Point-of-Care Aptasensor for the Real-Time Detection of Sepsis Biomarker</h3>
+      <img class="cover" src="./assets/langmuir-cover.jpg" width="421" height="560" loading="lazy" decoding="async"
+           alt="Cover of Langmuir volume 41, issue 26, the issue in which the paper appears.">
+      <p class="measure">Kuttoth, H.; Pathak, T.; Sandhyarani, N. <em>Langmuir</em> 2025, 41 (26).</p>
+      <p class="doi">DOI 10.1021/acs.langmuir.5c00784</p>
+      <p class="fine">The paper cites this patent as reference 38. The published science and the granted claim point at each other.</p>
+      <div class="card-actions">
+        <a class="text-link" href="https://doi.org/10.1021/acs.langmuir.5c00784" target="_blank" rel="external noopener">Read the paper<span aria-hidden="true"> →</span></a>
+      </div>
     </article>
 
   </div>
 </section>
 
 <section id="applies" class="reveal">
-  <p class="kicker mono">06 — Applications</p>
   <h2>Where it applies</h2>
   <p class="measure lead">The sensor has been demonstrated in three real sample types: whole blood, mayonnaise, and fruit juice.</p>
-  <p class="measure">Those results point at two settings — bedside clinical testing, where a laboratory turnaround is too slow, and screening for bacterial contamination in food.</p>
+  <p class="measure">Those results point at two settings. Bedside clinical testing, where a laboratory turnaround is too slow. And screening for bacterial contamination in food.</p>
   <p class="measure fine">The LAL assay remains the pharmacopeial standard for compliance testing. This is a screening instrument, not a replacement for it.</p>
 </section>
 
 <section id="about" class="reveal about">
   <div class="about-grid">
-    <div>
-      <p class="kicker mono">07 — About</p>
-      <h2>About</h2>
+    <div class="about-copy">
+      <h2>About, and how to reach me</h2>
       <p class="measure lead">I'm Tushar Pathak, one of five inventors on patent IN 429867. I worked across the portable analyser's electronics and firmware, the Android application, sensor preparation, and the validation testing in blood and food samples.</p>
-      <p class="measure">The work was carried out in Dr. N. Sandhyarani's group at NIT Calicut.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="mailto:Tushar_Pathak@outlook.com?subject=Pratyasa%20%E2%80%94%20Patent%20IN429867">Get in touch</a>
-      </div>
+      <p class="measure">The work was carried out in Dr. N. Sandhyarani's group at NIT Calicut. The patent is owned by the institute, so this page is a record of the work rather than an offer to license it. If you want to talk about where the technology could go, I'd like to hear from you.</p>
+
+      <a class="contact-card" href="mailto:Tushar_Pathak@outlook.com?subject=Pratyasa%20%E2%80%94%20Patent%20IN429867">
+        <span class="contact-label">Email the co-inventor</span>
+        <span class="contact-addr">Tushar_Pathak@outlook.com</span>
+      </a>
+      <p class="fine">Not an email client? Copy the address above. For anything touching licensing or assignment, the National Institute of Technology–Calicut is the patentee and the party to approach.</p>
     </div>
     <figure class="case">
       <img src="./assets/case-brand.jpg" width="1400" height="1158" loading="lazy" decoding="async"
@@ -285,7 +309,6 @@
 
 <footer>
   <p class="measure fine">Patent IN 429867 is owned by the National Institute of Technology–Calicut and credited to its five named inventors. This page is a technical record maintained by co-inventor Tushar Pathak. The device is a research prototype and is not an approved or regulated diagnostic product. It is not intended for clinical decision-making.</p>
-  <p class="mono fine credit">IN 429867 · National Institute of Technology–Calicut · <em>Langmuir</em> 2025 · DOI 10.1021/acs.langmuir.5c00784</p>
 </footer>
 
 <script src="./app.js" defer></script>
