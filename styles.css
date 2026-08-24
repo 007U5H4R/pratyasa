@@ -342,7 +342,11 @@ main > section, footer {
 .contact-addr { font: 600 1.06rem var(--mono); color: var(--gold); word-break: break-all; }
 .contact-card:hover .contact-addr { color: var(--gold-hi); }
 .case { margin: 0; }
-.case img { width: 100%; border: 1px solid var(--line); border-radius: var(--r); }
+.case img {
+  width: 100%;
+  /* the artwork carries its own frame, so no border or radius competing with it */
+  box-shadow: 0 22px 48px rgba(0, 0, 0, .58), 0 3px 10px rgba(0, 0, 0, .4);
+}
 
 /* ---------- Footer ---------- */
 footer { border-top: 1px solid var(--line); padding-top: 2.2rem; padding-bottom: 3.4rem; }

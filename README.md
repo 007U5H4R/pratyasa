@@ -36,7 +36,7 @@ real consequences.
 | `demo.mp4` | `IMG_3445.MOV` (4K HEVC, `rotation=-90`) → `transpose=2` to landscape, per-channel gain correction, 720p H.264. Two segments — sample application, then the result — with the processing wait elided. The page says so. |
 | `certificate.jpg` | Page 1 of the grant certificate PDF, rasterised. |
 | `wordmark.webp` | The real wordmark, lifted from a photo of the product's presentation case by keying on *yellowness* (gold letters, neutral background) rather than brightness. |
-| `case-brand.jpg` | That same case, cropped to its face. |
+| `case-framed.webp` | That same case, cropped to its face, then composited into a gold frame. The frame is rebuilt from a photographed corner of real moulding: the face was extracted as an oriented rectangle along the arm, then tiled (alternate tiles mirrored) across four sides with 45° mitred corners, rather than stretched. |
 | `og-cover.png` | 1200×630, screenshotted from a local HTML page by headless Chrome — crisp text, nothing generated. |
 | `icon-*.png` | Rendered the same way from an SVG of the mark (a differential-pulse-voltammetry peak). |
 
