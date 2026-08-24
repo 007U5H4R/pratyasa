@@ -287,6 +287,19 @@ footer { border-top: 1px solid var(--line); padding-top: 2.4rem; padding-bottom:
   .statbar > div:last-child  { border-radius: 0 0 var(--r-sm) var(--r-sm); }
   .statbar > div + div { border-top: 0; }
 }
+/* Narrow screens: give the nav its own full-width row and fade its right edge,
+   so the links that scroll off are visibly there rather than a guess. */
+@media (max-width: 700px) {
+  .site-head { flex-wrap: wrap; gap: .45rem 1rem; padding-bottom: .35rem; }
+  .site-head nav {
+    order: 3; width: 100%; margin-left: 0;
+    gap: 1.05rem; padding-bottom: .1rem;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent 100%);
+            mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent 100%);
+  }
+  .site-head nav a { font-size: .86rem; }
+}
+
 @media (max-width: 560px) {
   body { font-size: 1rem; }
   .bento { grid-template-columns: minmax(0, 1fr); }
