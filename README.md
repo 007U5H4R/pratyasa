@@ -57,4 +57,4 @@ the manifest's `start_url`/`scope` are `"./"`.
 
 ## Live
 
-Not yet deployed.
+**Live:** https://pratyasa.vercel.app
