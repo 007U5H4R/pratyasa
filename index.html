@@ -171,7 +171,39 @@
   <p class="measure lead">An attogram is a quintillionth of a gram. The sensor's floor sits at ten of them per millilitre, and it stays linear across nine orders of magnitude above that.</p>
 
   <figure class="scale">
-    <svg viewBox="0 0 1000 190" role="img" aria-labelledby="sc-t sc-d">
+    <!-- Narrow screens get a vertical ladder rather than a horizontal one that
+         scrolls its own point (the 10 ag/mL floor) off the edge. Only one is in
+         the accessibility tree at a time; the other is display:none. -->
+    <svg class="scale-v" viewBox="0 0 330 500" role="img" aria-labelledby="scv-t scv-d">
+      <title id="scv-t">Detection range on a logarithmic mass scale</title>
+      <desc id="scv-d">A vertical logarithmic axis from milligrams per millilitre down to attograms per millilitre. The sensor's linear range runs from 10 nanograms per millilitre down to its detection limit of 10 attograms per millilitre, nine orders of magnitude.</desc>
+
+      <line class="axis" x1="150" y1="36" x2="150" y2="452"/>
+      <g class="ticks">
+        <g><line x1="142" y1="36"  x2="158" y2="36"/><text x="130" y="41">mg/mL</text></g>
+        <g><line x1="142" y1="119" x2="158" y2="119"/><text x="130" y="124">µg/mL</text></g>
+        <g><line x1="142" y1="202" x2="158" y2="202"/><text x="130" y="207">ng/mL</text></g>
+        <g><line x1="142" y1="286" x2="158" y2="286"/><text x="130" y="291">pg/mL</text></g>
+        <g><line x1="142" y1="369" x2="158" y2="369"/><text x="130" y="374">fg/mL</text></g>
+        <g><line x1="142" y1="452" x2="158" y2="452"/><text x="130" y="457">ag/mL</text></g>
+      </g>
+
+      <line class="band" x1="150" y1="175" x2="150" y2="424"/>
+
+      <g class="marker">
+        <line x1="132" y1="175" x2="168" y2="175"/>
+        <text x="178" y="180" text-anchor="start">10 ng/mL</text>
+      </g>
+      <g class="marker marker-lod">
+        <line x1="132" y1="424" x2="168" y2="424"/>
+        <circle cx="150" cy="424" r="5"/>
+        <text x="178" y="420" text-anchor="start">10 ag/mL</text>
+        <text x="178" y="440" text-anchor="start" class="sub">limit of detection</text>
+      </g>
+      <text class="span-label" x="300" y="300" text-anchor="middle" transform="rotate(-90 300 300)">nine orders of magnitude</text>
+    </svg>
+
+    <svg class="scale-h" viewBox="0 0 1000 190" role="img" aria-labelledby="sc-t sc-d">
       <title id="sc-t">Detection range on a logarithmic mass scale</title>
       <desc id="sc-d">A logarithmic axis from milligrams per millilitre down to attograms per millilitre. The sensor's linear range spans from 10 nanograms per millilitre down to 10 attograms per millilitre, nine orders of magnitude, ending at its detection limit.</desc>
 
@@ -285,9 +317,9 @@
   <p class="measure fine">The LAL assay remains the pharmacopeial standard for compliance testing. This is a screening instrument, not a replacement for it.</p>
 </section>
 
-<section id="about" class="reveal about">
+<section id="about" class="reveal">
   <div class="about-grid">
-    <div class="about-copy">
+    <div>
       <h2>About, and how to reach me</h2>
       <p class="measure lead">I'm Tushar Pathak, one of five inventors on patent IN 429867. I worked across the portable analyser's electronics and firmware, the Android application, sensor preparation, and the validation testing in blood and food samples.</p>
       <p class="measure">The work was carried out in Dr. N. Sandhyarani's group at NIT Calicut. The patent is owned by the institute, so this page is a record of the work rather than an offer to license it. If you want to talk about where the technology could go, I'd like to hear from you.</p>

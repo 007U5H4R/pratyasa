@@ -84,6 +84,7 @@ h1, h2 {
   line-height: 1.04;
   letter-spacing: -.005em;
   margin: 0 0 .5em;
+  text-wrap: balance;
 }
 h1 { font-size: clamp(2.6rem, 6.4vw, 4.6rem); }
 h2 { font-size: clamp(1.9rem, 4vw, 2.9rem); }
@@ -106,7 +107,7 @@ a:hover { color: var(--signal-hi); }
 ::selection { background: rgba(233, 206, 98, .26); color: #fff; }
 
 .text-link {
-  display: inline-flex; align-items: center; min-height: 44px;
+  display: inline-block; padding-block: .62rem;   /* clears 44px without flex splitting the arrow off */
   font-weight: 620; text-decoration-thickness: 1px;
 }
 .text-link.quiet { color: var(--text-2); font-weight: 550; }
@@ -225,6 +226,7 @@ main > section, footer {
 .diagram .sig-f { fill: var(--signal); }
 .diagram .gold-f { fill: var(--gold); }
 .diagram .hit { fill: transparent; }
+.diagram .flow { stroke-dasharray: 5 6; opacity: .75; }
 .js .diagram g[data-stage] { opacity: .8; transition: opacity .35s var(--ease); cursor: pointer; }
 .js .diagram g[data-stage].is-active { opacity: 1; }
 .js .diagram g[data-stage].is-active text { fill: var(--gold); }
@@ -260,7 +262,8 @@ main > section, footer {
   background: var(--surface); border: 1px solid var(--line); border-radius: var(--r);
   overflow-x: auto; min-width: 0;
 }
-.scale svg { min-width: 620px; }
+.scale .scale-v { display: none; }
+.scale .scale-h { min-width: 620px; }
 .scale .axis { stroke: var(--line-2); stroke-width: 1.5; }
 .scale .ticks line { stroke: var(--line-2); stroke-width: 1.5; }
 .scale .ticks text { font: 500 13px var(--mono); fill: var(--text-3); text-anchor: middle; }
@@ -281,7 +284,6 @@ main > section, footer {
   padding: 1.4rem; min-height: 138px; min-width: 0;
   display: flex; flex-direction: column; justify-content: flex-end;
 }
-.cell-wide  { grid-column: span 2; }
 .cell-samples { grid-column: span 1; }
 .cell-media { padding: 0; overflow: hidden; grid-row: span 2; }
 .cell-media img { width: 100%; height: 100%; object-fit: cover; }
@@ -371,11 +373,22 @@ footer { border-top: 1px solid var(--line); padding-top: 2.2rem; padding-bottom:
             mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent 100%);
   }
   .site-head nav a { font-size: .88rem; min-height: 44px; }
+
+  /* the horizontal ladder scrolls its own point off-screen at this width */
+  .scale { overflow-x: visible; }
+  .scale .scale-h { display: none; }
+  .scale .scale-v { display: block; width: 100%; max-width: 340px; margin-inline: auto; min-width: 0; }
+
+  /* the diagram still scrolls here, so say so the way the nav does */
+  .diagram-pane {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 34px), transparent 100%);
+            mask-image: linear-gradient(to right, #000 calc(100% - 34px), transparent 100%);
+  }
 }
 @media (max-width: 560px) {
   body { font-size: 1rem; }
   .bento { grid-template-columns: minmax(0, 1fr); }
-  .cell-wide, .cell-samples { grid-column: span 1; }
+  .cell-samples { grid-column: span 1; }
   .brand img { width: 112px; }
   .facts > div { grid-template-columns: 5.9rem 1fr; }
   .card .cover { float: none; margin: 0 0 1rem; }
