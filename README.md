@@ -24,7 +24,7 @@ claim rather than take it on trust.
 The whole thing is one `index.html`, one stylesheet, one script, and a web app manifest. No
 framework, no build step, no dependencies, no third-party requests, no analytics.
 
-**Live:** https://pratyasa.vercel.app
+**Live:** https://pratyasa.tusharpathak.com
 
 ## Highlights
 
