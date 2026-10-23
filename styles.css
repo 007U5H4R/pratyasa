@@ -305,6 +305,8 @@ main > section { scroll-margin-top: 72px; }
 .step:hover { background: rgba(255, 255, 255, .02); }
 .step.is-active { background: rgba(233, 198, 90, .045); border-top-color: var(--gold); }
 .step.is-active .step-n { color: var(--gold); }
+.step.is-active strong { color: var(--gold); }
+.step.is-active .step-b { color: var(--gold-hi); }
 @media (prefers-reduced-motion: reduce) {
   .step, .step .step-n { transition: none; }
 }
